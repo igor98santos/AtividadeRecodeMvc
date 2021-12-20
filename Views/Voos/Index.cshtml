@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Entrega.Models.Voo>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Inicio</h1>
+
+<p>
+    <a asp-action="Create">Cadastrar Voo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Numero_Voo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NomeDestino)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CPF)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CartaoDeCredito)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Numero_Voo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeDestino)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CPF)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CartaoDeCredito)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Detalhes de Voo</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Cancelar Voo</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

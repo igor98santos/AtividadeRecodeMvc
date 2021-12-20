@@ -1,0 +1,75 @@
+body{
+    background-color: #dfe9f5;
+} 
+
+/*Confugurações da navBar inicio*/
+#logo h4{
+    color: #6c85bd;
+}
+span{
+    color: #002a5e;
+}
+.col a{
+    color: #6c85bd;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+.col a:hover{
+    color: #002a5e;
+}
+
+/*Confugurações da navBar FIM (The End)*/
+
+/*Conteudo da home*/
+#pai img{
+    width:1em;
+    height: 56em;
+}
+.conteudo{
+    padding: 1.5em;
+    margin: 1.5em;
+    width: 100%;
+}
+.conteudo .row .col a{
+    text-decoration: none;
+    color: #002a5e;
+}
+
+.row .col-sm-3 a:hover{
+    color: #002a5e;
+}
+.row .col h3{
+    color: #6c85bd;
+}
+
+
+.row .col-sm-3 a{
+    text-decoration: none;
+    color: #002a5e;
+}
+.row .col-sm-3 h5{
+    text-decoration: none;
+    color: #6c85bd;
+}
+
+/*Rodape*/
+footer{
+    text-align: center;
+}
+footer span{
+    color: #002a5e;
+}
+
+
+/*promoções inicio*/
+h3{
+    text-align: center;
+}
+#meio{
+    background: url(../imagens/topo.jpg) no-repeat fixed ;
+    background-size: cover;
+    width: 100%;
+    
+}
+
+/*promoções fim*/

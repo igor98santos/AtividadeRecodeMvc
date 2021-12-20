@@ -1,0 +1,49 @@
+﻿@model Entrega.Models.Voo
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Cadastrar Voo</h1>
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Numero_Voo" class="control-label"></label>
+                <input asp-for="Numero_Voo" class="form-control" />
+                <span asp-validation-for="Numero_Voo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NomeDestino" class="control-label"></label>
+                <input asp-for="NomeDestino" class="form-control" />
+                <span asp-validation-for="NomeDestino" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CPF" class="control-label"></label>
+                <input asp-for="CPF" class="form-control" />
+                <span asp-validation-for="CPF" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CartaoDeCredito" class="control-label"></label>
+                <input asp-for="CartaoDeCredito" class="form-control" />
+                <span asp-validation-for="CartaoDeCredito" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" asp-controller="Voos">Voltar ao Inicio de Cadastro</a>
+  
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
