@@ -1,42 +1,46 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Entrega</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/Entrega.styles.css" asp-append-version="true" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>@ViewData["Title"] - Entrega</title>
+	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+	<link rel="stylesheet" href="~/Entrega.styles.css" asp-append-version="true" />
 </head>
 <body>
-    
-     
-           <nav class="navbar navbar-light" style="background-color: #e3f2fd;"><!--Inicio da navbar-->
-        <h4 class="logo">Viagens //<span>Pectros</span> </h4>
-        <div class="container">
-            <div class="row">
-              <div class="col"><a asp-action="index">Home</a></div>
-              <div class="col"><a asp-action="Promoções">Promoções</a></div>
-              <div class="col"><a asp-action="Destino">Destinos</a></div>
-               <div class="col"><a asp-action="Create"  asp-controller="contatoes"> Contato</a></div>
-              <div class="col"><a asp-action="Create"  asp-controller="Clientes"> Cadastrar</a></div>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light"  style="background-color: #e3f2fd;">
+		<a class="navbar-brand" asp-action="index">Agencia//Pectros</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav">
+				<li class="nav-item active">
+					<a class="nav-link" asp-action="index">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" asp-action="Promoções">Promoções</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" asp-action="Create"  asp-controller="contatoes">Contatos</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link "asp-action="Create"  asp-controller="Clientes">Cadastrar</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
 
-  
-            </div>
-            </div>
-            <hr>
-    </nav>
-   
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+	<div class="container">
+		<main role="main" class="pb-3">
+			@RenderBody()
+		</main>
+	</div>
 
-    <footer class="border-top footer text-muted">
-      
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+	<footer class="border-top footer text-muted">
+	</footer>
+	 <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
